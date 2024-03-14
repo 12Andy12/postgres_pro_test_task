@@ -3,8 +3,10 @@
 struct roots solve_equation(int a, int b, int c)
 {
 	struct roots result;
+
 	double discriminant = b * b - 4 * a * c; //Вычисляем дискриминант
-	if (discriminant < 0) // Корней нет
+
+	if (a == 0 || discriminant < 0) // Корней нет или уравнение не квадратное
 	{
 		result.size = 0;
 	}
