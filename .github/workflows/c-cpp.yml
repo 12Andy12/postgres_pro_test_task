@@ -1,21 +1,17 @@
-name: C/C++ CI
+name: Build
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: push
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     
-    - name: Bild
+    - name: Build application
       run: make
       
-    - name: Tests
+    - name: Build tests
       run: make check
