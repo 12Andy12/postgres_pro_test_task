@@ -15,12 +15,18 @@ jobs:
     
     - name: Build application
       run: make
-      
+
+  tests:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@main
+    
     - name: install check
       run: sudo apt-get install check
       
     - name: Build tests
       run: make check
-    
-    - name: Build tests
-      run: make check
+
+      
