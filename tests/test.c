@@ -26,11 +26,10 @@ START_TEST(checking_for_two_root)
 }
 END_TEST
 
-START_TEST(ñhecking_for_quadraticity)
+START_TEST(checking_for_quadraticity)
 {
     struct roots example = solve_equation(0, 3, 1);
     fail_unless(example.size == 0, "The equation must be quadratic");
-]
 }
 END_TEST
 
@@ -46,7 +45,7 @@ int main(void)
     tcase_add_test(tc1_1, checking_for_missing_roots);
     tcase_add_test(tc1_1, checking_for_one_root);
     tcase_add_test(tc1_1, checking_for_two_root);
-    tcase_add_test(tc1_1, ñhecking_for_quadraticity);
+    tcase_add_test(tc1_1, checking_for_quadraticity);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
