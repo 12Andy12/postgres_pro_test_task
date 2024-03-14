@@ -14,7 +14,7 @@ check: obj/test.o obj/quadratic_equation.o
 	./bin/tests
 
 obj/test.o: tests/test.c
-	gcc -c -Wall -Wextra tests/test.c -o obj/test.o
+	gcc -c -Wall tests/test.c -o obj/test.o
 
 clean:
 	rm -rf obj/*.o
