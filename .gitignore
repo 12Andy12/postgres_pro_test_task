@@ -1,3 +1,4 @@
 bin/tests
 bin/main
 *.o
+!README.md
