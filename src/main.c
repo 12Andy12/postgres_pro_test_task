@@ -27,4 +27,6 @@ int main()
 	example = solve_equation(2, 1, 2);
 	printf("2x^2 + 1x + 2 = 0:\t");
 	print_roots(example);
+
+	free(example.x);
 }
